@@ -1,0 +1,66 @@
+@import "../../config/breakpoints.scss";
+@import "../../config/colors.scss";
+
+.Landing {
+  text-align: center;
+  color: $appWhite;
+  background: url(../../assets/img/beer_background.png);
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100px;
+    padding-bottom: 30px;
+    @media only screen and (min-width: $desktop-sm) {
+      width: 200px;
+    }
+  }
+
+  .landing_image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      padding: 0 10px;
+      width: 40px;
+
+      @media only screen and (min-width: $tablet) {
+        padding: 0 30px;
+        width: 55px;
+      }
+    }
+  }
+
+  .landing_header_container {
+    padding-top: 60px;
+    .landing_name {
+      font-size: 36px;
+      font-weight: 300;
+      margin: 0;
+      padding-bottom: 10px;
+
+      @media only screen and (min-width: $tablet) {
+        font-size: 64px;
+      }
+    }
+
+    .landing_discription {
+      font-size: 30px;
+      padding-bottom: 10px;
+      margin: 0;
+
+      @media only screen and (min-width: $tablet) {
+        font-size: 60px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

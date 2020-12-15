@@ -1,0 +1,12 @@
+@import "../../config/breakpoints.scss";
+@import "../../config/colors.scss";
+
+.Portfolio {
+  background: blue;
+  text-align: center;
+  min-height: 600px;
+
+  h1 {
+    margin: 0;
+  }
+}

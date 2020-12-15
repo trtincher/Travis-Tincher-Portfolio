@@ -1,0 +1,54 @@
+@import "../../config/breakpoints.scss";
+@import "../../config/colors.scss";
+
+.About {
+  background: $appWhite;
+  padding: 20px;
+
+  .headerBox {
+    border: 6px solid $primary;
+    width: 250px;
+    margin: 0 auto;
+
+    h1 {
+      text-transform: uppercase;
+      padding: 15px 0;
+      color: $primary;
+      font-size: 24px;
+      letter-spacing: 5px;
+    }
+  }
+
+  .headshot {
+    background: $light;
+    height: 196px;
+    width: 196px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    margin-top: 30px;
+    overflow: hidden;
+
+    img {
+      width: 196px;
+    }
+  }
+
+  .about_body {
+    width: 225px;
+    margin: auto;
+    text-align: left;
+
+    p {
+      line-height: 1.5em;
+      letter-spacing: 1.5px;
+    }
+
+    span {
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+}

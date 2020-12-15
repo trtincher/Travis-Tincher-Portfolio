@@ -1,0 +1,39 @@
+@import "../../config/breakpoints.scss";
+@import "../../config/colors.scss";
+
+.Quote2 {
+  background: $light;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  @media only screen and (min-width: $tablet) {
+    height: 100%;
+  }
+
+  p {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 230px;
+    @media only screen and (min-width: $moble-lg) {
+      font-size: 24px;
+      width: 245px;
+      top: 35px;
+      left: 35px;
+    }
+  }
+
+  img {
+    width: 215px;
+    position: absolute;
+    bottom: -25px;
+    right: -40px;
+  }
+}
