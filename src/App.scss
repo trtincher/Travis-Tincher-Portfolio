@@ -1,0 +1,16 @@
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Montserrat&display=swap");
+@import "./config/breakpoints.scss";
+@import "./config/colors.scss";
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-family: "Advent Pro", sans-serif;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}

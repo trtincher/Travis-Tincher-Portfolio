@@ -1,0 +1,46 @@
+@import "../../config/breakpoints.scss";
+@import "../../config/colors.scss";
+
+.Grid {
+  background: green;
+  text-align: center;
+  min-height: 600px;
+
+  h1 {
+    margin: 0;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    display: grid;
+    grid-template-rows: 50vw 50vw;
+    grid-template-columns: 50% 50%;
+
+    .grid_1 {
+      overflow: hidden;
+
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    .grid_2 {
+      overflow: hidden;
+
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    .grid_3 {
+      overflow: hidden;
+
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+    }
+
+    .grid_4 {
+      overflow: hidden;
+
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+    }
+  }
+}
