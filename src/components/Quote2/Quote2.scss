@@ -8,7 +8,7 @@
   overflow: hidden;
   position: relative;
 
-  @media only screen and (min-width: $tablet) {
+  @media only screen and (min-width: $desktop-sm) {
     height: 100%;
   }
 
@@ -28,6 +28,18 @@
       top: 35px;
       left: 35px;
     }
+
+    @media only screen and (min-width: $desktop-sm) {
+      font-size: 36px;
+      width: 430px;
+      top: 50px;
+      left: 50px;
+    }
+
+    @media only screen and (min-width: $desktop-lg) {
+      font-size: 48px;
+      width: 500px;
+    }
   }
 
   img {
@@ -35,5 +47,15 @@
     position: absolute;
     bottom: -25px;
     right: -40px;
+
+    @media only screen and (min-width: $desktop-sm) {
+      width: 300px;
+      bottom: 0;
+      right: 0;
+    }
+
+    @media only screen and (min-width: $desktop-lg) {
+      width: 450px;
+    }
   }
 }

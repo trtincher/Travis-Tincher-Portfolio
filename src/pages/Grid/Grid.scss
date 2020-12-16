@@ -10,7 +10,7 @@
     margin: 0;
   }
 
-  @media only screen and (min-width: $tablet) {
+  @media only screen and (min-width: $desktop-sm) {
     display: grid;
     grid-template-rows: 50vw 50vw;
     grid-template-columns: 50% 50%;

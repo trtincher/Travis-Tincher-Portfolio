@@ -6,8 +6,9 @@
   height: 250px;
   width: 100%;
   position: relative;
+  overflow: hidden;
 
-  @media only screen and (min-width: $tablet) {
+  @media only screen and (min-width: $desktop-sm) {
     height: 100%;
   }
 
@@ -21,11 +22,24 @@
     width: 175px;
     top: 20px;
     right: 20px;
+
     @media only screen and (min-width: $moble-lg) {
       font-size: 24px;
       width: 200px;
       top: 35px;
       right: 35px;
+    }
+
+    @media only screen and (min-width: $desktop-sm) {
+      font-size: 36px;
+      width: 300px;
+      top: 50px;
+      right: 50px;
+    }
+
+    @media only screen and (min-width: $desktop-lg) {
+      font-size: 48px;
+      width: 500px;
     }
   }
 
@@ -34,5 +48,15 @@
     position: absolute;
     bottom: -33px;
     left: -25px;
+
+    @media only screen and (min-width: $desktop-sm) {
+      width: 250px;
+      bottom: 0;
+      left: 0;
+    }
+
+    @media only screen and (min-width: $desktop-lg) {
+      width: 350px;
+    }
   }
 }
