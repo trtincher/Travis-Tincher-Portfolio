@@ -6,9 +6,11 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 function App() {
   return (
     <div className="App">
-      <Landing />
-      <Grid />
-      <Portfolio />
+      <div className="wrapper">
+        <Landing />
+        <Grid />
+        <Portfolio />
+      </div>
     </div>
   );
 }

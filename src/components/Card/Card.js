@@ -1,0 +1,33 @@
+import React from "react";
+import "./Card.scss";
+
+function Card({ title, description, image, url, github, software }) {
+  const descriptionArray = description.split("|");
+
+  return (
+    <div className="Card">
+      <div className="content_wrapper">
+        <img src={image} alt="project image" />
+        <div className="card_body">
+          <div className="title">
+            <h1>{title}</h1>
+            <p className="card_sub">{software}</p>
+          </div>
+
+          <p className="card_article">
+            {descriptionArray[0]}
+            <span>{descriptionArray[1]}</span>
+            {descriptionArray[2]}
+          </p>
+          <div className="card_button">
+            <a href={url} target="_blank">
+              See Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Card;

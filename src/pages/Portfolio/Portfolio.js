@@ -1,10 +1,17 @@
 import React from "react";
 import "./Portfolio.scss";
+import PortDeck from "../../components/PortDeck/PortDeck";
+import divider from "../../assets/svgs/divider.svg";
 
 function Portfolio() {
   return (
     <div className="Portfolio">
-      <h1>Portfolio</h1>
+      <header>
+        <h1>Portfolio</h1>
+        <img src={divider} alt="divider" />
+      </header>
+
+      <PortDeck />
     </div>
   );
 }

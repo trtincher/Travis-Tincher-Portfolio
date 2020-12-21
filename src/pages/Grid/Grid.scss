@@ -2,7 +2,7 @@
 @import "../../config/colors.scss";
 
 .Grid {
-  background: green;
+  background: $appWhite;
   text-align: center;
   min-height: 600px;
 
@@ -12,7 +12,8 @@
 
   @media only screen and (min-width: $desktop-sm) {
     display: grid;
-    grid-template-rows: 50vw 50vw;
+    min-height: $desktop-sm;
+    grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
 
     .grid_1 {
@@ -42,5 +43,9 @@
       grid-column: 2 / span 1;
       grid-row: 2 / span 1;
     }
+  }
+
+  @media only screen and (min-width: $desktop-lg) {
+    min-height: $desktop-lg;
   }
 }

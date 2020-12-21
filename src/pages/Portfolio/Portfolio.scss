@@ -2,11 +2,29 @@
 @import "../../config/colors.scss";
 
 .Portfolio {
-  background: blue;
+  background: $primary;
   text-align: center;
   min-height: 600px;
 
-  h1 {
-    margin: 0;
+  header {
+    width: 50%;
+    margin: auto;
+
+    h1 {
+      color: $appWhite;
+      margin: 0;
+      padding-top: 50px;
+      font-size: 38px;
+
+      @media only screen and (min-width: $tablet) {
+        font-size: 48px;
+      }
+    }
+
+    img {
+      width: 80%;
+      max-width: 250px;
+      padding-top: 10px;
+    }
   }
 }

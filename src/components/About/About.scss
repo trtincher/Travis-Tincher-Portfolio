@@ -9,6 +9,8 @@
     display: grid;
     height: 100%;
     width: 100%;
+    max-width: $desktop-sm/2;
+    margin: auto;
     grid-template-columns: 1fr 1fr;
     grid-template-row: 40% 40% 20%;
     padding: 0;
@@ -42,7 +44,9 @@
     }
   }
 
-  @media only screen and (min-width: $desktop-sm) {
+  @media only screen and (min-width: $desktop-lg) {
+    max-width: $desktop-lg/2;
+
     .about_1 {
       margin: 90px 90px 0 90px;
     }
@@ -138,6 +142,11 @@
     }
 
     @media only screen and (min-width: $desktop-sm) {
+      width: 90%;
+      font-size: 16px;
+    }
+
+    @media only screen and (min-width: $desktop-lg) {
       width: 90%;
       font-size: 20px;
     }
