@@ -7,7 +7,7 @@ import github from "../../assets/svgs/github.svg";
 
 function Landing() {
   return (
-    <div className="Landing">
+    <div className="Landing" id="Home">
       <div className="landing_header_container">
         <h2 className="landing_name">Travis Tincher</h2>
         <h1 className="landing_discription">Software Developer</h1>
@@ -16,9 +16,13 @@ function Landing() {
       <img src={divider} alt="page divider" />
 
       <div className="landing_image_container">
-        <img src={email} alt="" />
-        <img src={github} alt="" />
-        <img src={linkedin} alt="" />
+        <img src={email} alt="emal logo" />
+        <a href="https://github.com/trtincher" target="_blank">
+          <img src={github} alt="github logo" />
+        </a>
+        <a href="https://www.linkedin.com/in/travis-tincher/" target="_blank">
+          <img src={linkedin} alt="linkedin logo" />
+        </a>
       </div>
     </div>
   );

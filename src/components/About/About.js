@@ -4,7 +4,7 @@ import headshot from "../../assets/img/headshot-transparent.png";
 
 function About() {
   return (
-    <div className="About">
+    <div className="About" id="About">
       <div className="headerBox about_1">
         <h1>About Me</h1>
       </div>

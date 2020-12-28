@@ -62,11 +62,7 @@ function PortDeck() {
 
   console.log("projectList", projectList);
 
-  return (
-    <div className="PortDeck">
-      <div className="card_container">{projectList}</div>
-    </div>
-  );
+  return <div className="PortDeck">{projectList}</div>;
 }
 
 export default PortDeck;

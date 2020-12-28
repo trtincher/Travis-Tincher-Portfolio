@@ -2,13 +2,17 @@
 @import "../../config/colors.scss";
 
 .Card {
-  width: 100%;
   background: $secondary;
-  margin: 80px 0;
+  width: 100%;
+  margin: 80px auto;
   padding: 20px 20px;
   color: $appWhite;
   text-align: left;
   filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.2));
+
+  @media only screen and (min-width: $desktop-lg) {
+    width: $desktop-lg - 40px;
+  }
 
   .content_wrapper {
     @media only screen and (min-width: $tablet) {

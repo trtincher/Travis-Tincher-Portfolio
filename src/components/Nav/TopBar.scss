@@ -1,0 +1,49 @@
+@import "../../config/breakpoints.scss";
+@import "../../config/colors.scss";
+
+.desktop-logo {
+  display: none;
+
+  @media only screen and (min-width: $desktop-sm) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35px;
+    z-index: 500;
+    padding: 20px 0 0 20px;
+    display: block;
+  }
+}
+
+.TopBar {
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0px;
+  z-index: 500;
+
+  ul {
+    display: none;
+    list-style: none;
+
+    @media only screen and (min-width: $desktop-sm) {
+      display: flex;
+      background: transparent;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li {
+      padding: 10px 20px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 24px;
+    }
+
+    a {
+      color: $appBlack;
+      text-decoration: none;
+      font-size: 24px;
+    }
+  }
+}

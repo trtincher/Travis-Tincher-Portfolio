@@ -1,0 +1,50 @@
+@import "../../config/breakpoints.scss";
+@import "../../config/colors.scss";
+
+.Footer {
+  @media only screen and (max-width: $desktop-sm) {
+    display: none;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $appWhite;
+  color: $primary;
+  height: 150px;
+  width: 100%;
+
+  .footer-branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+
+    .footer-logo-name {
+      line-height: 2px;
+      font-size: 32px;
+      color: $primary;
+      padding-left: 10px;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+
+  .footer-navs {
+    ul {
+      list-style: none;
+      display: flex;
+      padding-right: 40px;
+    }
+
+    li {
+      padding: 0 20px 0 20px;
+      font-size: 24px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $primary;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+}

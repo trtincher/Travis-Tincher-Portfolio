@@ -3,8 +3,10 @@
 
 .Skills {
   background: $appWhite;
-  padding: 20px;
+  padding: 50px;
   overflow: hidden;
+  max-width: $desktop-sm/2;
+  margin: auto;
 
   @media only screen and (min-width: $tablet) {
     height: 100%;
@@ -12,8 +14,12 @@
 
   .headerBox {
     border: 6px solid $primary;
-    width: 250px;
+    width: 80%x;
     margin: 0 auto;
+
+    @media only screen and (min-width: $desktop-sm) {
+      width: 100%;
+    }
 
     h1 {
       text-transform: uppercase;
@@ -26,5 +32,26 @@
 
   .skills_body {
     min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 30px 10px;
+
+    .skill_container {
+      padding: 12px;
+
+      @media only screen and (min-width: $desktop-lg) {
+        padding: 20px;
+      }
+
+      img {
+        width: 20px;
+
+        @media only screen and (min-width: $desktop-lg) {
+          width: 25px;
+        }
+      }
+    }
   }
 }

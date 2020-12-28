@@ -5,7 +5,7 @@ import divider from "../../assets/svgs/divider.svg";
 
 function Portfolio() {
   return (
-    <div className="Portfolio">
+    <div className="Portfolio" id="Portfolio">
       <header>
         <h1>Portfolio</h1>
         <img src={divider} alt="divider" />

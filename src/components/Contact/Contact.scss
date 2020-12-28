@@ -1,0 +1,64 @@
+@import "../../config/breakpoints.scss";
+@import "../../config/colors.scss";
+
+.Contact {
+  width: 500px;
+  height: 600px;
+  color: $primary;
+  background: $appWhite;
+  border-radius: 15px;
+  position: fixed;
+  left: calc(50% - 250px);
+  top: calc(50% - 300px);
+  z-index: 600;
+  text-align: center;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
+  transition: all 700ms;
+
+  img {
+    width: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    color: $secondary;
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      padding-top: 20px;
+
+      input {
+        background: $inputBackground;
+        border: 1px solid $light;
+        margin-top: 5px;
+        font-size: 18px;
+        padding: 2px;
+      }
+
+      textarea {
+        background: $inputBackground;
+        border: 1px solid $light;
+        margin-top: 5px;
+      }
+    }
+
+    .submit-button {
+      width: 150px;
+      margin: 30px auto auto auto;
+      background: $secondary;
+      border: none;
+      border-radius: 10px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 24px;
+      color: $appWhite;
+    }
+  }
+}
