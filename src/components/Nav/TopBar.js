@@ -3,7 +3,7 @@ import "./TopBar.scss";
 import logo from "../../assets/svgs/squareLogo.svg";
 import resume from "../../assets/pdf/Travis_Tincher_Resume.pdf";
 
-function TopBar() {
+function TopBar({ onContactClick }) {
   return (
     <>
       <a href="#Home">
@@ -20,7 +20,9 @@ function TopBar() {
           <li>
             <a href="#Portfolio">Portfolio</a>
           </li>
-          <li>Contact</li>
+          <li>
+            <p onClick={onContactClick}>Contact</p>
+          </li>
           <li>
             <a href={resume} target="_blank">
               Resume

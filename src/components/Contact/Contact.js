@@ -1,42 +1,99 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Contact.scss";
 import exit from "../../assets/svgs/exit-icon.svg";
+import emailjs from "emailjs-com";
+import Confirmation from "./Confirmation";
 
-function Contact() {
-  const [isContactOpen, setIsContactOpen] = useState("false");
-  const [top, setTop] = useState("5000px");
+function Contact({ top, onContactClick }) {
+  const [emailConfirmation, setEmailConfirmation] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [formValues, setFormValues] = useState({
+    name: "",
+    subject: "",
+    email: "",
+    message: "",
+  });
 
-  const onContactClick = () => {
-    if (isContactOpen) {
-      setTop("5000px");
-    } else {
-      setTop("calc(50% - 300px)");
-    }
+  useEffect(() => {
+    setEmailConfirmation(false);
+    setEmailError(false);
+  }, [top]);
 
-    setIsContactOpen(!isContactOpen);
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5qhb5bm",
+        "template_g3rbt0j",
+        e.target,
+        "user_1tTUVlfVHJ0QgAOqETSmf"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setEmailConfirmation(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setEmailError(true);
+        }
+      );
+  }
+
+  const handleChange = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
   };
 
   return (
     <div className="Contact" style={{ top: `${top}` }}>
+      {emailConfirmation ? <Confirmation /> : null}
+
       <img src={exit} alt="exit icon" onClick={onContactClick} />
       <h1>Contact Me</h1>
-      <form>
+      <form onSubmit={sendEmail}>
         <div className="form-field">
           <label for="name">Full Name</label>
-          <input type="text" name="name" />
+          <input
+            type="text"
+            name="name"
+            value={formValues.name}
+            onChange={handleChange}
+          />
         </div>
         <div className="form-field">
           <label for="subject">Subject</label>
-          <input type="text" name="subject" />
+          <input
+            type="text"
+            name="subject"
+            value={formValues.subject}
+            onChange={handleChange}
+          />
         </div>
         <div className="form-field">
           <label for="email">Your Email</label>
-          <input type="email" name="email" />
+          <input
+            type="email"
+            name="email"
+            value={formValues.email}
+            onChange={handleChange}
+          />
         </div>
 
         <div className="form-field">
           <label for="message">Message</label>
-          <textarea name="message" rows="12" />
+          <textarea
+            name="message"
+            rows="12"
+            value={formValues.message}
+            onChange={handleChange}
+          />
         </div>
 
         <button type="submit" className="submit-button">

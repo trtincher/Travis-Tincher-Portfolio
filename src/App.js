@@ -10,21 +10,29 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState("false");
+  const [top, setTop] = useState("5000px");
+
+  const onContactClick = () => {
+    if (isContactOpen) {
+      setTop("5000px");
+    } else {
+      setTop("calc(50% - 300px)");
+    }
+
+    setIsContactOpen(!isContactOpen);
+  };
 
   return (
     <div className="App">
-      <TopBar />
-      <NavLeft />
-      <Contact
-        isContactOpen={isContactOpen}
-        setIsContactOpen={setIsContactOpen}
-      />
+      <TopBar onContactClick={onContactClick} />
+      <NavLeft onContactClick={onContactClick} />
+      <Contact onContactClick={onContactClick} top={top} />
 
       <div className="wrapper">
         <Landing />
         <Grid />
         <Portfolio />
-        <Footer />
+        <Footer onContactClick={onContactClick} />
       </div>
     </div>
   );

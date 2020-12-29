@@ -4,7 +4,7 @@ import "./NavLeft.scss";
 import logo from "../../assets/svgs/squareLogo.svg";
 import resume from "../../assets/pdf/Travis_Tincher_Resume.pdf";
 
-function NavLeft() {
+function NavLeft({ onContactClick }) {
   const [isOpen, setIsOpen] = useState(false);
   const [left, setLeft] = useState("-500px");
   const [display, setDisplay] = useState("none");
@@ -44,8 +44,8 @@ function NavLeft() {
           <li onClick={onNavClick}>
             <a href="#Portfolio">Portfolio</a>
           </li>
-          <li onClick={onNavClick}>
-            <a href="">Contact</a>
+          <li onClick={onNavClick} className="list-contact">
+            <p onClick={onContactClick}>Contact</p>
           </li>
           <li onClick={onNavClick}>
             <a href={resume} target="_blank">
