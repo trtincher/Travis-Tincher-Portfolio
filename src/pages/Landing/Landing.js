@@ -5,7 +5,7 @@ import email from "../../assets/svgs/mail.svg";
 import linkedin from "../../assets/svgs/linkedin.svg";
 import github from "../../assets/svgs/github.svg";
 
-function Landing() {
+function Landing({ onContactClick }) {
   return (
     <div className="Landing" id="Home">
       <div className="landing_header_container">
@@ -16,7 +16,7 @@ function Landing() {
       <img src={divider} alt="page divider" />
 
       <div className="landing_image_container">
-        <img src={email} alt="emal logo" />
+        <img src={email} alt="emal logo" onClick={onContactClick} />
         <a href="https://github.com/trtincher" target="_blank">
           <img src={github} alt="github logo" />
         </a>

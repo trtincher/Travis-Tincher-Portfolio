@@ -19,10 +19,17 @@ function Card({ title, description, image, url, github, software }) {
             <span>{descriptionArray[1]}</span>
             {descriptionArray[2]}
           </p>
-          <div className="card_button">
-            <a href={url} target="_blank">
-              See Project
-            </a>
+          <div className="card_btn_container">
+            <div className="card_button">
+              <a href={github} target="_blank">
+                GitHub
+              </a>
+            </div>
+            <div className="card_button">
+              <a href={url} target="_blank">
+                See Website
+              </a>
+            </div>
           </div>
         </div>
       </div>

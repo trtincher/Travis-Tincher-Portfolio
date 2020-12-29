@@ -25,6 +25,9 @@
   ul {
     display: none;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 
     @media only screen and (min-width: $desktop-sm) {
       display: flex;
@@ -35,16 +38,18 @@
     }
 
     li {
-      padding: 10px 20px;
+      padding: 0px 20px;
       font-family: "Montserrat", sans-serif;
-      font-size: 24px;
+      font-size: 20px;
       cursor: pointer;
     }
 
     a {
       color: $appBlack;
       text-decoration: none;
-      font-size: 24px;
+      font-size: 20px;
+      padding: 0;
+      margin: 0;
     }
   }
 }

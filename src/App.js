@@ -9,17 +9,14 @@ import Footer from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
 
 function App() {
-  const [isContactOpen, setIsContactOpen] = useState("false");
   const [top, setTop] = useState("5000px");
 
   const onContactClick = () => {
-    if (isContactOpen) {
+    if (top === "calc(50% - 300px)") {
       setTop("5000px");
     } else {
       setTop("calc(50% - 300px)");
     }
-
-    setIsContactOpen(!isContactOpen);
   };
 
   return (
@@ -29,7 +26,7 @@ function App() {
       <Contact onContactClick={onContactClick} top={top} />
 
       <div className="wrapper">
-        <Landing />
+        <Landing onContactClick={onContactClick} />
         <Grid />
         <Portfolio />
         <Footer onContactClick={onContactClick} />

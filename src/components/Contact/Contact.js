@@ -17,6 +17,12 @@ function Contact({ top, onContactClick }) {
   useEffect(() => {
     setEmailConfirmation(false);
     setEmailError(false);
+    setFormValues({
+      name: "",
+      subject: "",
+      email: "",
+      message: "",
+    });
   }, [top]);
 
   function sendEmail(e) {

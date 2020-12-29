@@ -4,7 +4,7 @@
 .Landing {
   text-align: center;
   color: $appWhite;
-  background: url(../../assets/img/beer_background.png);
+  background: url(../../assets/img/beer_background.png) $primary;
   background-size: cover;
   background-position: center;
   height: 95vh;
@@ -17,6 +17,8 @@
   img {
     width: 100px;
     padding-bottom: 30px;
+    cursor: pointer;
+
     @media only screen and (min-width: $desktop-sm) {
       width: 200px;
     }
