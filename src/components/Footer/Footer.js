@@ -3,7 +3,7 @@ import "./Footer.scss";
 import logo from "../../assets/svgs/squareLogo.svg";
 import resume from "../../assets/pdf/Travis_Tincher_Resume.pdf";
 
-function Footer() {
+function Footer({ onContactClick }) {
   return (
     <div className="Footer">
       <a href="#Home">
@@ -18,16 +18,16 @@ function Footer() {
       <div className="footer-navs">
         <ul>
           <li>
-            <a href=".About">About</a>
+            <a href="#About">About</a>
           </li>
           <li>
-            <a href=".Skills">Skills</a>
+            <a href="#Skills">Skills</a>
           </li>
           <li>
-            <a href=".Portfolio">Portfolio</a>
+            <a href="#Portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <p onClick={onContactClick}>Contact</p>
           </li>
           <li>
             <a href={resume} target="_blank">
